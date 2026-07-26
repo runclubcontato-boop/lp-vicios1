@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livre de Verdade — Ebook para homens cristãos | R$ 19,90</title>
+<meta name="description" content="Ebook com jornada de 7 semanas para homens cristãos que lutam contra o vício sexual. Prática, bíblica e humana — sem legalismo. Acesso imediato por R$ 19,90.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #141311;
+    --bg-soft: #1c1a17;
+    --bg-paper: #221f1b;
+    --text: #f3ece0;
+    --text-dim: #b0a899;
+    --gold: #C5A021;
+    --gold-soft: rgba(197,160,33,0.16);
+    --line: rgba(243,236,224,0.12);
+    --ok: #8fbf7a;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Source Sans 3', sans-serif;
+    font-size:1.05rem;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+
+  .wrap{ width:min(920px, calc(100% - 40px)); margin:0 auto; }
+  .wrap-wide{ width:min(1040px, calc(100% - 40px)); margin:0 auto; }
+
+  h1,h2,h3{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    line-height:1.15;
+  }
+
+  .kicker{
+    font-size:0.78rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+    font-weight:600;
+  }
+
+  .section{
+    padding:88px 0;
+    border-top:1px solid var(--line);
+  }
+  .section--soft{ background:var(--bg-soft); }
+
+  .lead{
+    color:var(--text-dim);
+    font-size:1.08rem;
+    max-width:640px;
+  }
+  .lead + .lead{ margin-top:16px; }
+
+  .cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--gold);
+    color:#1a160c;
+    text-decoration:none;
+    font-weight:700;
+    font-size:0.95rem;
+    letter-spacing:0.03em;
+    padding:16px 28px;
+    border-radius:4px;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .cta:hover{ background:#d4b12a; transform:translateY(-1px); }
+  .cta-wrap{ margin-top:28px; }
+  .cta-note{
+    margin-top:12px;
+    font-size:0.9rem;
+    color:var(--text-dim);
+  }
+
+  /* ---- HERO ---- */
+  .hero{
+    position:relative;
+    min-height:92svh;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .hero__bg{ position:absolute; inset:0; }
+  .hero__bg img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 35%;
+  }
+  .hero__shade{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(20,19,17,0.45) 0%, rgba(20,19,17,0.55) 40%, rgba(20,19,17,0.94) 78%, #141311 100%);
+  }
+  .hero__inner{
+    position:relative;
+    z-index:1;
+    width:min(780px, calc(100% - 40px));
+    margin:0 auto;
+    padding:0 0 56px;
+    text-align:center;
+  }
+  .hero__brand{
+    font-size:0.8rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+    font-weight:600;
+  }
+  .hero__product{
+    display:inline-block;
+    margin-bottom:16px;
+    padding:6px 12px;
+    border:1px solid rgba(197,160,33,0.35);
+    color:var(--text-dim);
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+  }
+  .hero h1{
+    font-size:clamp(2.15rem, 5.8vw, 3.35rem);
+    margin-bottom:18px;
+    max-width:22ch;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+    font-weight:500;
+  }
+  .hero__sub{
+    color:var(--text-dim);
+    font-size:1.1rem;
+    max-width:540px;
+    margin:0 auto 26px;
+  }
+
+  .price-box{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    margin-bottom:22px;
+  }
+  .price-old{
+    color:var(--text-dim);
+    font-size:1rem;
+    text-decoration:line-through;
+  }
+  .price-now{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-size:2.6rem;
+    font-weight:600;
+    color:var(--gold);
+    line-height:1;
+  }
+  .price-now small{ font-size:0.45em; margin-right:2px; }
+
+  .seals{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px 18px;
+    margin-top:22px;
+    color:var(--text-dim);
+    font-size:0.92rem;
+  }
+  .seals span{ display:inline-flex; align-items:center; gap:7px; }
+  .seals i{
+    color:var(--ok);
+    font-style:normal;
+    font-weight:700;
+  }
+
+  /* ---- PAIN LIST ---- */
+  .pain-list{
+    list-style:none;
+    margin-top:28px;
+    max-width:640px;
+    display:grid;
+    gap:12px;
+  }
+  .pain-list li{
+    padding-left:22px;
+    position:relative;
+    color:var(--text-dim);
+  }
+  .pain-list li::before{
+    content:"";
+    position:absolute;
+    left:0; top:0.72em;
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--gold);
+    opacity:0.85;
+  }
+
+  /* ---- RECEBE / CAPA ---- */
+  .deliver-grid{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:40px;
+    align-items:center;
+    margin-top:8px;
+  }
+  @media (max-width:700px){
+    .deliver-grid{ grid-template-columns:1fr; gap:28px; }
+  }
+  .cover-shot{
+    width:100%;
+    max-width:220px;
+    margin:0 auto;
+    border-radius:4px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.45);
+    border:1px solid var(--line);
+  }
+  .check-list{
+    list-style:none;
+    display:grid;
+    gap:12px;
+    margin-top:20px;
+  }
+  .check-list li{
+    display:grid;
+    grid-template-columns:22px 1fr;
+    gap:10px;
+    color:var(--text-dim);
+  }
+  .check-list i{
+    color:var(--ok);
+    font-style:normal;
+    font-weight:700;
+  }
+
+  /* ---- STORY ---- */
+  .story-grid{
+    display:grid;
+    grid-template-columns:160px 1fr;
+    gap:36px;
+    align-items:start;
+  }
+  @media (max-width:700px){
+    .story-grid{ grid-template-columns:1fr; gap:22px; justify-items:start; }
+  }
+  .story-aside{ text-align:center; }
+  @media (max-width:700px){
+    .story-aside{ text-align:left; display:flex; align-items:center; gap:16px; }
+  }
+  .story-photo{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center top;
+    border:2px solid rgba(197,160,33,0.45);
+    margin:0 auto 12px;
+  }
+  @media (max-width:700px){
+    .story-photo{ margin:0; width:96px; height:96px; flex-shrink:0; }
+  }
+  .story-role{
+    font-size:0.88rem;
+    color:var(--gold);
+    font-weight:600;
+    line-height:1.35;
+  }
+  .story-role span{
+    display:block;
+    color:var(--text-dim);
+    font-weight:500;
+    margin-top:4px;
+  }
+  .story h2{
+    font-size:clamp(2rem, 4.5vw, 2.8rem);
+    margin-bottom:20px;
+    max-width:18ch;
+  }
+  .story p{ color:var(--text-dim); max-width:640px; }
+  .story p + p{ margin-top:16px; }
+  .story .pull{
+    margin-top:28px;
+    padding-left:20px;
+    border-left:3px solid var(--gold);
+    color:var(--text);
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-size:1.45rem;
+    font-style:italic;
+    line-height:1.4;
+    max-width:520px;
+  }
+
+  .section h2{
+    font-size:clamp(2.1rem, 4.5vw, 3rem);
+    margin-bottom:14px;
+  }
+  .section-intro{
+    color:var(--text-dim);
+    max-width:560px;
+    margin-bottom:40px;
+  }
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  @media (max-width:860px){
+    .cards{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px){
+    .cards{ grid-template-columns:1fr; }
+  }
+  .card{
+    background:var(--bg-paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:26px 24px;
+  }
+  .card .mark{
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:10px;
+    font-size:1.05rem;
+  }
+  .card h3{
+    font-size:1.45rem;
+    margin-bottom:8px;
+  }
+  .card p{
+    color:var(--text-dim);
+    font-size:0.98rem;
+  }
+
+  .desire{
+    margin-top:48px;
+    padding-top:36px;
+    border-top:1px solid var(--line);
+    max-width:640px;
+  }
+  .desire h3{
+    font-size:1.8rem;
+    margin-bottom:12px;
+  }
+  .desire p{ color:var(--text-dim); }
+
+  .weeks{
+    list-style:none;
+    display:grid;
+    gap:0;
+    margin-top:8px;
+  }
+  .weeks li{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:16px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .weeks .n{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-size:1.5rem;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .weeks b{ display:block; margin-bottom:2px; }
+  .weeks span{ color:var(--text-dim); font-size:0.98rem; }
+
+  /* ---- OFFER ---- */
+  .offer{
+    text-align:center;
+    padding:96px 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, var(--gold-soft), transparent 65%),
+      var(--bg-soft);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .offer h2{
+    font-size:clamp(2.3rem, 5vw, 3.2rem);
+    margin:0 auto 10px;
+    max-width:18ch;
+  }
+  .offer .offer-lead{
+    color:var(--text-dim);
+    max-width:520px;
+    margin:0 auto 24px;
+  }
+  .offer-box{
+    max-width:520px;
+    margin:0 auto 28px;
+    text-align:left;
+    background:var(--bg-paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:26px 24px;
+  }
+  .offer-box h3{
+    font-size:1.35rem;
+    margin-bottom:14px;
+    text-align:center;
+  }
+  .offer .price-old{ font-size:1.15rem; }
+  .offer .price-now{ font-size:3.4rem; margin:6px 0; }
+  .offer .save{
+    display:inline-block;
+    margin:8px 0 10px;
+    padding:8px 14px;
+    border:1px solid rgba(197,160,33,0.45);
+    color:var(--gold);
+    font-size:0.92rem;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+  .offer .price-anchor{
+    color:var(--text-dim);
+    font-size:0.95rem;
+    margin-bottom:22px;
+  }
+
+  .guarantee{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    max-width:720px;
+    margin:36px auto 0;
+    text-align:left;
+  }
+  @media (max-width:700px){
+    .guarantee{ grid-template-columns:1fr; }
+  }
+  .guarantee article{
+    border-top:2px solid var(--gold);
+    padding-top:18px;
+  }
+  .guarantee h3{
+    font-size:1.35rem;
+    margin-bottom:8px;
+  }
+  .guarantee p{ color:var(--text-dim); font-size:0.98rem; }
+
+  .faq{
+    display:grid;
+    gap:0;
+    max-width:720px;
+  }
+  .faq details{
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  .faq summary{
+    cursor:pointer;
+    font-weight:600;
+    list-style:none;
+    padding-right:24px;
+    position:relative;
+  }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary::after{
+    content:"+";
+    position:absolute;
+    right:0; top:0;
+    color:var(--gold);
+    font-size:1.3rem;
+  }
+  .faq details[open] summary::after{ content:"–"; }
+  .faq details p{
+    color:var(--text-dim);
+    margin-top:12px;
+    max-width:620px;
+  }
+
+  .final{
+    text-align:center;
+    padding:88px 0 100px;
+  }
+  .final h2{
+    font-size:clamp(2.1rem, 4.5vw, 3rem);
+    max-width:18ch;
+    margin:0 auto 16px;
+  }
+  .final p{
+    color:var(--text-dim);
+    max-width:500px;
+    margin:0 auto;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:28px 20px 40px;
+    text-align:center;
+    color:var(--text-dim);
+    font-size:0.88rem;
+  }
+  footer strong{
+    display:block;
+    color:var(--gold);
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-size:0.78rem;
+    margin-bottom:8px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 1. HERO -->
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="hero-lp.png" alt="">
+    </div>
+    <div class="hero__shade"></div>
+    <div class="hero__inner">
+      <p class="hero__brand">Livre de Verdade</p>
+      <p class="hero__product">Ebook · Jornada da Liberdade · 7 semanas</p>
+      <h1>Para homens cristãos que querem sair do ciclo da impureza — <em>sem mais uma promessa vazia</em></h1>
+      <p class="hero__sub">Um caminho prático, bíblico e humano. Para quem já orou, já se culpou, já tentou parar… e voltou. Com atividades, Palavra e direção — semana a semana.</p>
+
+      <div class="price-box">
+        <span class="price-old">De R$ 99,90</span>
+        <span class="price-now"><small>R$</small>19,90</span>
+      </div>
+
+      <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+
+      <div class="seals">
+        <span><i>✓</i> Acesso imediato</span>
+        <span><i>✓</i> Leitura no celular</span>
+        <span><i>✓</i> Garantia Hotmart</span>
+        <span><i>✓</i> Compra discreta</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. EMPATIA + DOR -->
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">Se isso soa familiar</p>
+      <h2>Você já prometeu que seria a última vez</h2>
+      <p class="lead">Orou. Bloqueou o site. Apagou o histórico. Em alguns dias deu certo. Em outros, veio a noite difícil — e a mesma luta. Depois, a vergonha. E o silêncio.</p>
+      <p class="lead">Não é só “falta de vontade”. Muitas vezes é um ciclo que cresceu no esconderijo. E enquanto ninguém sabe, fica mais difícil sair.</p>
+
+      <ul class="pain-list">
+        <li>Louvar no domingo e cair na segunda — e sentir que vive duas vidas.</li>
+        <li>Olhar para a esposa (ou para o futuro casamento) e carregar medo de ser descoberto.</li>
+        <li>Orar com a boca seca, com medo de que Deus tenha desistido de você.</li>
+        <li>Depois da queda: culpa, isolamento e a mentira de que “nunca vai mudar”.</li>
+        <li>Ser homem de fé por fora e se sentir um fracasso por dentro.</li>
+      </ul>
+
+      <div class="cta-wrap">
+        <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+        <p class="cta-note">Acesso imediato · Garantia Hotmart · Compra discreta</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. O QUE RECEBE + CAPA -->
+  <section class="section section--soft" id="produto">
+    <div class="wrap">
+      <p class="kicker">O que você recebe</p>
+      <h2>Não é mais um PDF motivacional</h2>
+      <p class="section-intro">É um ebook completo — a Jornada da Liberdade — com método de 7 semanas, exercícios escritos e fundamento bíblico com linguagem simples.</p>
+
+      <div class="deliver-grid">
+        <img class="cover-shot" src="capa.png" alt="Capa do ebook Livre de Verdade">
+        <div>
+          <ul class="check-list">
+            <li><i>✓</i><span>Jornada prática de <strong style="color:var(--text)">7 semanas</strong> (Consciência → Caminhada)</span></li>
+            <li><i>✓</i><span>Atividades e exercícios escritos para aplicar na vida real</span></li>
+            <li><i>✓</i><span>Explicações bíblicas sem legalismo — foco em graça e restauração</span></li>
+            <li><i>✓</i><span>Fundamentos psicológicos e neurocientíficos em linguagem simples</span></li>
+            <li><i>✓</i><span>Plano para continuar nos 60 dias seguintes — inclusive nos dias difíceis</span></li>
+            <li><i>✓</i><span>Acesso digital imediato no celular, tablet ou computador</span></li>
+          </ul>
+          <div class="cta-wrap">
+            <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 7 SEMANAS -->
+  <section class="section" id="jornada">
+    <div class="wrap">
+      <p class="kicker">Como funciona</p>
+      <h2>7 semanas. Uma direção clara.</h2>
+      <p class="section-intro">Cada semana tem um foco: Palavra, reflexão, entendimento prático e uma atividade para aplicar. Feito para homens cansados — não para “atletas espirituais”.</p>
+
+      <ol class="weeks">
+        <li><div class="n">01</div><div><b>Consciência</b><span>Pare de lutar sozinho e reconheça o ciclo da vergonha.</span></div></li>
+        <li><div class="n">02</div><div><b>Entendimento</b><span>Entenda o ciclo da queda: gatilho, desejo, comportamento, alívio.</span></div></li>
+        <li><div class="n">03</div><div><b>Raiz</b><span>Olhe o que está por trás do comportamento — com honestidade e cuidado.</span></div></li>
+        <li><div class="n">04</div><div><b>Graça</b><span>Receba a graça que transforma, sem viver na condenação.</span></div></li>
+        <li><div class="n">05</div><div><b>Luz</b><span>Traga à luz o que estava escondido, com alguém ao seu lado.</span></div></li>
+        <li><div class="n">06</div><div><b>Reconstrução</b><span>Reconstrua rotina e ambiente para a escolha certa ficar mais perto.</span></div></li>
+        <li><div class="n">07</div><div><b>Caminhada</b><span>Continue com um plano de 60 dias — inclusive nos dias difíceis.</span></div></li>
+      </ol>
+
+      <div class="cta-wrap">
+        <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Quero começar as 7 semanas agora</a>
+        <p class="cta-note">Hoje por R$ 19,90 · Acesso imediato após a compra</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BENEFÍCIOS + DESEJO -->
+  <section class="section section--soft" id="beneficios">
+    <div class="wrap-wide">
+      <p class="kicker">O que muda no caminho</p>
+      <h2>Do esconderijo para a verdade — um passo de cada vez</h2>
+      <p class="section-intro">O livro não promete milagre de marketing. Promete direção: para você entender o ciclo, receber graça e reconstruir a caminhada com Cristo.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="mark">✔</div>
+          <h3>Entenda por que você cai</h3>
+          <p>Pare de se tratar só como “fraco”. Veja o ciclo com clareza — e onde ele começa.</p>
+        </article>
+        <article class="card">
+          <div class="mark">✔</div>
+          <h3>Nomeie seus gatilhos</h3>
+          <p>Solidão, cansaço, ansiedade, tela à noite — os momentos em que a queda fica mais perto.</p>
+        </article>
+        <article class="card">
+          <div class="mark">✔</div>
+          <h3>Saia do loop da culpa</h3>
+          <p>Depois da queda, a condenação empurra de volta para o esconderijo. Há outro caminho.</p>
+        </article>
+        <article class="card">
+          <div class="mark">✔</div>
+          <h3>Traga luz sem se destruir</h3>
+          <p>Aprenda a conversar com alguém seguro — e a não carregar isso sozinho.</p>
+        </article>
+        <article class="card">
+          <div class="mark">✔</div>
+          <h3>Reconstrua rotina e ambiente</h3>
+          <p>Hábitos, saídas práticas e um plano para os dias difíceis.</p>
+        </article>
+        <article class="card">
+          <div class="mark">✔</div>
+          <h3>Volte a caminhar com Deus</h3>
+          <p>Oração, Palavra e honestidade — sem fingir perfeição que você não tem.</p>
+        </article>
+      </div>
+
+      <div class="desire wrap" style="padding:0;">
+        <h3>O que muitos homens desejam — e têm medo de admitir</h3>
+        <p>Paz de consciência. Olhar nos olhos sem medo. Orar sem sentir que está mentindo. Restaurar confiança no casamento. Ser íntegro por dentro e por fora. Não é magia. É caminhada — e ela começa com um passo concreto.</p>
+      </div>
+
+      <div class="cta-wrap" style="text-align:center;">
+        <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. AUTOR -->
+  <section class="section story" id="autor">
+    <div class="wrap">
+      <p class="kicker">Quem escreveu</p>
+      <div class="story-grid">
+        <aside class="story-aside">
+          <img class="story-photo" src="samuel.png" alt="Pastor Samuel Machado da Silva" width="140" height="140">
+          <p class="story-role">Pastor Samuel Machado da Silva<span>38 anos · casado · pai de duas meninas</span></p>
+        </aside>
+        <div>
+          <h2>Eu quase perdi minha família carregando isso sozinho</h2>
+          <p>Sou pastor Samuel Machado, marido e pai. Por anos, vivi uma luta que ninguém via — e que quase destruiu o que eu mais amava. O vício me empurrou para a vergonha e para o silêncio. Eu me afastava da minha esposa. Prometia mudança. Falhava. E cada queda confirmava a mentira: “você nunca vai sair disso.”</p>
+          <p>Tentei cursos, esforço e força de vontade. Em alguns dias eu conseguia. Em outros, voltava ao mesmo ciclo. Até entender que só tentar “parar” não bastava. Eu precisava olhar o que estava por baixo — os gatilhos, as feridas e o caminho que me levava de volta à queda.</p>
+          <p>Foi na minha própria reconstrução que nasceu esta jornada de 7 semanas. Eu mesmo precisei dela. Escrevi este livro para o homem que, como eu, está cansado de lutar sozinho — inclusive para quem serve na igreja e ainda carrega isso em silêncio.</p>
+          <p class="pull">O passado não precisa ter a última palavra. Existe caminho de volta — e, na minha história, esse caminho passou por Jesus Cristo.</p>
+          <div class="cta-wrap">
+            <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+            <p class="cta-note">Escrito por quem viveu a luta — e precisou do mesmo caminho</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. OFERTA + GARANTIA -->
+  <section class="offer" id="comprar">
+    <div class="wrap">
+      <p class="kicker">Oferta</p>
+      <h2>Livre de Verdade</h2>
+      <p class="offer-lead">A Jornada da Liberdade em ebook digital — 7 semanas, atividades práticas e acesso imediato.</p>
+
+      <div class="offer-box">
+        <h3>Tudo o que está incluso</h3>
+        <ul class="check-list">
+          <li><i>✓</i><span>Ebook completo · Jornada da Liberdade</span></li>
+          <li><i>✓</i><span>Método de 7 semanas com exercícios escritos</span></li>
+          <li><i>✓</i><span>Base bíblica + linguagem simples (psicologia/neurociência)</span></li>
+          <li><i>✓</i><span>Plano de continuidade (60 dias)</span></li>
+          <li><i>✓</i><span>Leitura no celular, tablet ou computador</span></li>
+        </ul>
+      </div>
+
+      <div class="price-old">De R$ 99,90</div>
+      <div class="price-now"><small>R$</small>19,90</div>
+      <div class="save">Economize R$ 80,00</div>
+      <p class="price-anchor">Custa menos que um lanche — e você leva o material para reler no seu ritmo.</p>
+
+      <div>
+        <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+      </div>
+
+      <div class="seals" style="margin-top:28px;">
+        <span><i>✓</i> Acesso imediato</span>
+        <span><i>✓</i> Pagamento seguro Hotmart</span>
+        <span><i>✓</i> Compra discreta</span>
+      </div>
+
+      <div class="guarantee">
+        <article>
+          <h3>Garantia Hotmart</h3>
+          <p>Sua compra é protegida pela Hotmart. Se dentro do prazo de garantia da plataforma você sentir que o material não é para você, pode solicitar reembolso pelas regras oficiais.</p>
+        </article>
+        <article>
+          <h3>Sem milagre falso</h3>
+          <p>Não prometemos transformação mágica. Oferecemos um método claro, bíblico e prático — para você dar o próximo passo com direção, não sozinho no escuro.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <p class="kicker">Dúvidas frequentes</p>
+      <h2>Perguntas frequentes</h2>
+
+      <div class="faq" style="margin-top:32px;">
+        <details>
+          <summary>Isso não é “mais um ebook”?</summary>
+          <p>Não é um PDF só de motivação. É um passo a passo de 7 semanas com atividades para fazer na vida real — Bíblia, honestidade e prática. Sem legalismo. Com graça e restauração.</p>
+        </details>
+        <details>
+          <summary>Já tentei de tudo. Por que seria diferente?</summary>
+          <p>Porque muita gente tenta só “parar na força”. Esta jornada começa em outro lugar: ciclo, raiz, graça e luz — não só esforço. O pastor Samuel escreveu o que ele mesmo precisou aplicar quando o esforço sozinho falhou.</p>
+        </details>
+        <details>
+          <summary>E se não funcionar para mim?</summary>
+          <p>Você tem a proteção da garantia Hotmart, conforme as regras da plataforma. E o livro é honesto: não promete milagre. Promete um método claro para você caminhar — inclusive depois de uma queda.</p>
+        </details>
+        <details>
+          <summary>Não tenho disciplina. Serve mesmo assim?</summary>
+          <p>Sim. Foi pensado para homens cansados, não para rotinas perfeitas. Uma semana por vez. Atividades objetivas. Você avança no seu ritmo.</p>
+        </details>
+        <details>
+          <summary>Isso serve para mim? Sou casado / solteiro / líder de igreja…</summary>
+          <p>A jornada é para homens cristãos — casados ou solteiros — que querem sair do ciclo de vergonha. Inclusive para quem serve na igreja e carrega isso em silêncio. O ponto de partida é honestidade, não perfeição.</p>
+        </details>
+        <details>
+          <summary>A compra é discreta? Alguém vai saber?</summary>
+          <p>O pagamento é pela Hotmart, em ambiente seguro. Ninguém da sua igreja precisa saber. Você recebe o acesso digital e lê no seu aparelho, no seu tempo.</p>
+        </details>
+        <details>
+          <summary>Como recebo o ebook?</summary>
+          <p>Após a compra confirmada, o acesso é liberado de forma digital. Você pode ler no celular, tablet ou computador — e começar ainda hoje.</p>
+        </details>
+        <details>
+          <summary>E se eu cair de novo durante a jornada?</summary>
+          <p>O livro trata disso com verdade: a resposta depois da queda faz parte do caminho. Você não precisa abandonar o processo por um tropeço.</p>
+        </details>
+        <details>
+          <summary>O conteúdo é baseado na Bíblia?</summary>
+          <p>Sim. Cada semana traz Palavra, reflexão e um caminho prático — sem jargão pesado e sem tratar você como um caso perdido.</p>
+        </details>
+      </div>
+
+      <div class="cta-wrap">
+        <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+        <p class="cta-note">Acesso imediato · Garantia Hotmart · Compra discreta</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FINAL -->
+  <section class="final section--soft">
+    <div class="wrap">
+      <p class="kicker">Um passo concreto</p>
+      <h2>Você pode continuar escondendo — ou começar esta semana</h2>
+      <p>Se algo dentro de você reconheceu essa luta, não ignore. Abra o caminho com verdade, graça e direção. O próximo passo cabe em R$ 19,90 — e começa hoje.</p>
+      <div class="cta-wrap">
+        <a class="cta" href="https://pay.hotmart.com/K106884881J" target="_blank" rel="noopener noreferrer">Comprar o ebook por R$ 19,90</a>
+        <p class="cta-note">Livre de Verdade · Jornada da Liberdade · Acesso imediato</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Livre de Verdade</strong>
+    Pastor Samuel Machado da Silva · Jornada da Liberdade
+  </footer>
+
+</body>
+</html>
